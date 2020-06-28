@@ -14,7 +14,11 @@ class Welcome extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     SizedBox(height: 12),
-                    Image.asset('assets/welcome_banner.jpg'),
+                    Image.asset(
+                      'assets/welcome_banner.jpg',
+                      height: MediaQuery.of(context).size.height * 0.40,
+                      alignment: Alignment.center,
+                    ),
                     SizedBox(height: 28),
                     Text('BloodArena', style: TextStyle(fontSize: 32)),
                     Text('Every drop counts', style: TextStyle(fontSize: 16))
