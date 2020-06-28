@@ -20,26 +20,28 @@ class Welcome extends StatelessWidget {
                     Text('Every drop counts', style: TextStyle(fontSize: 16))
                   ],
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    MaterialButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/signin');
-                        },
-                        child: Text('Let me in!!!!!!!',
-                            style: TextStyle(color: Colors.red))),
-                    MaterialButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/signup');
-                        },
-                        child: Text('I\'m new sign me up!',
-                            style: TextStyle(color: Colors.white)),
-                        color: Colors.red),
-                    SizedBox(height: 28)
-                  ],
-                )
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        MaterialButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/signin');
+                            },
+                            child: Text('I\'m already a member',
+                                style: TextStyle(color: Colors.red))),
+                        MaterialButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/signup');
+                            },
+                            child: Text('I\'m new sign me up!',
+                                style: TextStyle(color: Colors.white)),
+                            color: Colors.red),
+                        SizedBox(height: 28)
+                      ],
+                    ))
               ],
             )));
   }
